@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project: Edward Guevara</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- This is a container for the whole page. -->
+    <div class="container">
+<!-- This will be the head of my page. -->
+        <header class="header">
+        <h1>The Quiz</h1>
+        <h2>VetsinTech Edition</h2>
+        <h3>Sponsored by</h3>
+        <img src="./images/DraftKingsLogo.png" alt="DraftKings Logo">
+        </header>
+<!-- These are the quiz questions. I need three rectangles. -->
+        <div class="questions">
+            <section id="question1">
+                <h3 class="question">1. Who sponsored this program?</h3>
+                <ul>
+                    <li><input type="radio" name="questionOne" id="a1">DraftKings</li>
+                    <li><input type="radio" name="questionOne" id="">Department of Defense</li>
+                    <li><input type="radio" name="questionOne" id="">Department of Veterans Affairs</li>
+                </ul>
+            </section>
+            <section id="question2">
+                <h3 class="question">2. Who coordinated this program?</h3>
+                <ul>
+                    <li><input type="radio" name="questionTwo" id="a2">VetsinTech</li>
+                    <li><input type="radio" name="questionTwo" id="">Department of Defense</li>
+                    <li><input type="radio" name="questionTwo" id="">Department of Veterans Affairs</li>
+                </ul>
+            </section>
+            <section id="question3">
+                <h3 class="question">3. Who is the better instructor?</h3>
+                <ul>
+                    <li><input type="radio" name="questionThree" id="" disabled>Brett Cunningham</li>
+                    <li><input type="radio" name="questionThree" id="" disabled>Daniel Kim</li>
+                    <li><input type="radio" name="questionThree" id="a3">They are a dynamic duo!</li>
+                </ul>
+            </section>
+            <section id="question4">
+                <h3 class="question">4. Which organization was founded in 2012?</h3>
+                <ul>
+                    <li><input type="radio" name="questionFour" id="">VetsinTech</li>
+                    <li><input type="radio" name="questionFour" id="">DraftKings</li>
+                    <li><input type="radio" name="questionFour" id="a4">Both</li>
+                </ul>
+            </section>
+            <section id="question5">
+                <h3 class="question">5. What is DraftKings' ticker symbol?</h3>
+                <ul>
+                    <li><input type="radio" name="questionFive" id="">DRFT</li>
+                    <li><input type="radio" name="questionFive" id="a5">DKNG</li>
+                    <li><input type="radio" name="questionFive" id="">RFTK</li>
+                </ul>
+            </section>
+            <section id="question6">
+                <h3 class="question">6. What is the name of DraftKings' program that helped cover the scholarships for this program?</h3>
+                <ul>
+                    <li><input type="radio" name="questionSix" id="a6">Tech for Heroes</li>
+                    <li><input type="radio" name="questionSix" id="">Scratch 'n Code</li>
+                    <li><input type="radio" name="questionSix" id="">TechDuel</li>
+                </ul>
+            </section>
+            <section id="question7">
+                <h3 class="question">7. Who can get support from the program?</h3>
+                <ul>
+                    <li><input type="radio" name="questionSeven" id="">Veterans</li>
+                    <li><input type="radio" name="questionSeven" id="">Their spouses</li>
+                    <li><input type="radio" name="questionSeven" id="a7">Both</li>
+                </ul>
+            </section>
+            <section id="question8">
+                <h3 class="question">8. What city hosted the first VetsinTech program?</h3>
+                <ul>
+                    <li><input type="radio" name="questionEight" id="">San Jose</li>
+                    <li><input type="radio" name="questionEight" id="a8">San Francisco</li>
+                    <li><input type="radio" name="questionEight" id="">Boston</li>
+                </ul>
+            </section>
+            <section id="question9">
+                <h3 class="question">9. Since starting their veterans support program, how much money has DraftKings raised in donations?</h3>
+                <ul>
+                    <li><input type="radio" name="questionNine" id="">More than $100,000</li>
+                    <li><input type="radio" name="questionNine" id="">More than $400,000</li>
+                    <li><input type="radio" name="questionNine" id="a9">More than $500,000</li>
+                </ul>
+            </section>
+            <section id="question10">
+                <h3 class="question">10. How many physical locations does DraftKings have around the world?</h3>
+                <ul>
+                    <li><input type="radio" name="questionTen" id="a10">14</li>
+                    <li><input type="radio" name="questionTen" id="">5</li>
+                    <li><input type="radio" name="questionTen" id="">10</li>
+                </ul>
+            </section>
+<!-- This is the submit button. -->
+            <div style="text-align: center;">
+            <button type="submit" class="btn-submit" id="btn-submit" onclick="calculate()">Submit Quiz</button> 
+            </div>
+
+
+        </div>        
+
+<!-- These are the buttons I'll be using on the quiz modal. Could be a carousel? -->
+        <div class="buttons">
+<!-- TODO: Add onClick attributes for startQuiz(), submitQuiz(), moveToQ2, etc. -->
+            <button id="start">Start Quiz</button>    
+            <button id="previous">Previous Question</button>    
+            <button id="next">Next Question</button>      
+        </div>
+ 
+<!-- If I get the functionality right, this will be the results of the quiz. -->
+        <section class="score-modal">
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span id="close">x</span>
+                    <h2>Thanks for taking The Quiz!</h2>
+                    <!-- This is where the JS will input their score. i.e. "You got 2 out of 3 correct!" -->
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+<!-- This is the link to my script file. -->
+    <script src="./script.js"></script>
+
+</body>
+</html>
